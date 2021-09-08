@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.azor.fileManager2.PrimaryController">
+     <MenuBar>
+        <Menu text="File">
+          <MenuItem text="Exit" onAction="#btnExitAction"/>
+        </Menu>
+     </MenuBar>
+   <HBox VBox.vgrow="ALWAYS">
+       <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+       <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+   </HBox>
+   <HBox spacing="5">
+                    <Button text="Copy" maxWidth="Infinity" focusTraversable="false" HBox.hgrow="ALWAYS" onAction="#copyBtnAction"/>
+                    <Button text="Cut" maxWidth="Infinity" focusTraversable="false" HBox.hgrow="ALWAYS" onAction="#cutBtnAction"/>
+                    <Button text="Delete" maxWidth="Infinity" focusTraversable="false" HBox.hgrow="ALWAYS" onAction="#deleteBtnAction"/>
+                    <Button text="Exit" maxWidth="Infinity" focusTraversable="false" HBox.hgrow="ALWAYS" onAction="#btnExitAction" />
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+   </HBox>
+</VBox>
